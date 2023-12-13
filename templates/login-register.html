@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osamu</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div>
+    <form id="registrationForm" class="page">
+        <h2>Sign up</h2>
+        <label for="regEmail">Email:</label>
+        <input type="text" id="regEmail" name="regEmail" required>
+
+        <label for="regPassword">Password:</label>
+        <input type="password" id="regPassword" name="regPassword" required>
+
+        <button type="button" onclick="register()">Sign up</button>
+
+        <div id="button-login" class="button-login" onclick="showLoginForm()">Log in</div>
+    </form>
+    <p id="regMessage" class="message"></p>
+
+    <form id="loginForm" class="page active">
+        <h2>Login</h2>
+        <label for="loginEmail">Email:</label>
+        <input type="text" id="loginEmail" name="loginEmail" required>
+
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="loginPassword" required>
+
+        <button type="button" onclick="login()">Login</button>
+
+        <div id="button-signup" class="button-signup" onclick="showRegistrationForm()">Sign up</div>
+    </form>
+    <p id="loginMessage" class="message active"></p>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</body>
+</html>

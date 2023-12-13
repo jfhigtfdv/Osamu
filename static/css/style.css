@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('Body.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:white;
+}
+
+form {
+    background-color: rgba(255,192,203, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(15px);
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.6s ease-in-out;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.message {
+    margin-top: 16px;
+    color: green;
+}
+
+.button-login,
+.button-signup {
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.message,
+.page {
+    display: none;
+}
+
+.message.active,
+.page.active {
+    display: block;
+}
+
+h2 {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylev2.css') }}">
+    <title>Osamu</title>
+</head>
+<body>
+    <div id="lds-ellipsis" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    <div id="container" class="container">
+        <div id="sidenav" class="sidenav">
+            <div class="mobile">
+                <header></header>
+                <div class="search-container">
+                    <input id="user-input" placeholder="Search...">
+                    <button id="search-button" type="button">🔎</button>
+                </div>
+                <div id="button-30" class="button-30"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li class="nav-item active" data-target="home">🏠 HOME</li>
+                    <li class="nav-item" data-target="watchlist">🍿 POPULAR</li>
+                    <li class="nav-item" data-target="genre">🪄 GENRE</li>
+                    <li class="nav-item" data-target="season">⛈️ SEASON</li>
+                    <li class="nav-item" data-target="settings" onclick="getSession()">🧾 RECENT</li>
+                    <li class="nav-item" data-target="about">❔ ABOUT</li>
+                    <li class="nav-item" onclick="redirectTo('/logout')">🪵 LOGOUT</li>
+                </ul>
+            </nav>
+        </div>
+        <div id="space-margin" class="space-margin"></div>
+        <div class="content">
+            <div class="div2">
+                <div id="home" class="page active">
+                    <div id="top" class="top">TOP AIRING</div>
+                    <div id="image-container" class="image-container"></div>
+
+                    <div id="recent" class="recent">RECENT RELEASE</div>
+                    <div id="image-container-recent" class="image-container-recent"></div>
+
+                    <div id="popular" class="popular">POPULAR</div>
+                    <div id="image-container-popular" class="image-container-popular"></div>
+
+                    <div id="movie" class="movie">MOVIES</div>
+                    <div id="image-container-movie" class="image-container-movie"></div>
+
+                    <div id="trending-tvshows" class="trending-tvshows">TRENDING TV SHOWS</div>
+                    <div id="image-container-trending-tvshows" class="image-container-trending-tvshows"></div>
+                </div>
+    
+                <div id="watchlist" class="page">
+                    <h1>WATCHLIST</h1>
+                </div>
+    
+                <div id="notification" class="page">
+                    <h1>NOTIFICATION</h1>
+                </div>
+    
+                <div id="settings" class="page">
+                    <div id="recent-user" class="recent-user">RECENT</div>
+                    <div id="image-container-recent-user" class="image-container-recent-user"></div>
+                </div>
+    
+                <div id="genre" class="page">
+                    <h1>GENRE</h1>
+                </div>
+
+                <div id="season" class="page">
+                    <h1>SEASON</h1>
+                </div>
+
+                <div id="about" class="page">
+                    <h1>ABOUT</h1>
+                <div class="textABOUT">
+                  This WEBSITE was named OSAMU, an anime streaming site, whereas you can watch your favorite anime for FREE.It is created by 4 BSIT college students for their FINAL PROJECT in ITC (INTRODUCTION TO COMPUTING) and made it possible by using the Programming Languages such as Python, TypeScript and Nodejs with SQLite3  and this website is designed NOT ONLY FOR EDUCATIONAL PURPOSES, BUT ALSO FOR ENTERTAINMENT PURPOSES.
+                  </div>
+                  
+                </div>
+
+                <div id="search" class="page">
+                    <div id="search-anime-results" class="search-anime-results">RESULTS</div>
+                    <div id="image-container-search" class="image-container-search"></div>
+                </div>
+
+                <div id="description" class="page">
+                    <div id="back-button" class="back-button" onclick="getSession()">BACK</div>
+                    <div class="description-design">
+                        <div id="image-container-details" class="image-container-details"></div>
+                        <div class="description-container">
+                            <div id="anime-description" class="anime-description"></div>
+                            <div id="type-anime" class="type-anime"></div>
+                            <div id="release-date" class="release-date"></div>
+                            <div id="status" class="status"></div>
+                            <div id="genres" class="genres"></div>
+                            <div id="totalEpisodes" class="totalEpisodes"></div>
+                            <div id="synopsis" class="synopsis"></div>
+                        </div>
+                    </div>
+                    <div id="episode-buttons-container" class="episode-buttons-container"></div>
+                    <div id="video-container" class="video-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Include Axios from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="{{ url_for('static', filename='js/source.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scriptv2.js') }}"></script>
+</body>
+</html>
